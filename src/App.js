@@ -1,6 +1,6 @@
-import { Route, BrowserRouter, Redirect, Switch } from "react-router-dom";
-import { Auth, routes } from "Libraries";
-import { authOptions } from "Libraries/HOC/Auth";
+import { Route, BrowserRouter, Redirect, Switch } from 'react-router-dom';
+import { Auth, routes } from 'Libraries';
+import { authOptions } from 'Libraries/HOC/Auth';
 
 function App() {
   return (
