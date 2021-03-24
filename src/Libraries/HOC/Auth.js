@@ -2,9 +2,10 @@ import { Redirect } from 'react-router-dom';
 import routes from 'Libraries/Routes';
 import { authOptions } from 'Libraries/enum';
 
-// option === true  -> only authenticated
-// option === false -> only not auth
-// option === null  -> whatever
+// USAGE
+//     check options in `../enum.js` and use
+//     example: `Auth(<YourComponent />, authOptions.WHATEVER)`
+
 const Auth = (TargetComponent, option) => {
   const AuthenticateCheck = () => {
     // TODO: @woohm402
