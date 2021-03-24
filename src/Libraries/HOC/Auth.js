@@ -1,28 +1,25 @@
-import { Redirect } from "react-router-dom";
-import routes from "Libraries/Routes";
-
-export const authOptions = {
-  MUST_LOGGED: 1,
-  MUST_NOT_LOGGED: 2,
-  WHATEVER: 3,
-}
+import { Redirect } from 'react-router-dom';
+import routes from 'Libraries/Routes';
+import { authOptions } from 'Libraries/enum';
 
 // option === true  -> only authenticated
 // option === false -> only not auth
 // option === null  -> whatever
 const Auth = (TargetComponent, option) => {
   const AuthenticateCheck = () => {
-    // TODO: change into below
-    //   const { logged } = useSelector((state) => state.user);
+    // TODO: @woohm402
+    //   todo: change into below
+    //       const { logged } = useSelector((state) => state.user);
+    //   when: redux 짜지면
 
     const logged = true;
 
-    switch(option) {
+    switch (option) {
       case authOptions.MUST_LOGGED:
-        if(!logged) <Redirect to={routes.Login.path} />;
+        if (!logged) <Redirect to={routes.Login.path} />;
         break;
       case authOptions.MUST_NOT_LOGGED:
-        if(logged) return <Redirect to={routes.Users.path} />;
+        if (logged) return <Redirect to={routes.Users.path} />;
         break;
       case authOptions.WHATEVER:
         break;
@@ -30,7 +27,7 @@ const Auth = (TargetComponent, option) => {
         // cannot reach here
         console.error('CANNOT REACH HERE');
     }
-    
+
     return <TargetComponent />;
   };
 
