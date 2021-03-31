@@ -1,0 +1,32 @@
+button.page-wrapper {
+  width: 246px;
+  height: 50px;
+  display: flex;
+  line-height: 50px;
+  align-items: center;
+  fill: rgb(200, 200, 200);
+  color: rgb(200, 200, 200);
+  transition: all 0.3s;
+  position: relative;
+  background-color: transparent;
+  border: transparent;
+  svg {
+    margin-left: 22px;
+    margin-right: 10px;
+    width: 24px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 20px;
+  }
+  &:hover {
+    fill: white;
+    color: white;
+    transform: scale(1.07);
+    cursor: pointer;
+  }
+}
+
+hr.page-line {
+  color: white;
+}

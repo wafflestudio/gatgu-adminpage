@@ -1,5 +1,5 @@
 import { Particle } from 'Assets';
-import PageHeader from 'Components/PageHeader';
+import PageHeader from 'Components/Common/PageHeader';
 import './ArticlesPage.scss';
 
 const ArticlesPage = () => {

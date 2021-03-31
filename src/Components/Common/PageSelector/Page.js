@@ -9,10 +9,13 @@ const Page = ({ icon, content, link }) => {
   };
 
   return (
-    <div className="page-wrapper" onClick={goToPage}>
-      {icon}
-      <h1>{content}</h1>
-    </div>
+    <>
+      <button className="page-wrapper" onClick={goToPage}>
+        {icon}
+        <h1>{content}</h1>
+      </button>
+      <hr className="page-line" />
+    </>
   );
 };
 

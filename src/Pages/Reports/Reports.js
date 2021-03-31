@@ -1,4 +1,4 @@
-import ReportsPage from 'Components/ReportsPage';
+import ReportsPage from 'Components/PageComponents/ReportsPage';
 
 const Reports = () => {
   return <ReportsPage />;

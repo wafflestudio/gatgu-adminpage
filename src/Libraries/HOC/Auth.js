@@ -1,8 +1,8 @@
 import { Redirect } from 'react-router-dom';
 import routes from 'Libraries/Routes';
 import { authOptions } from 'Libraries/enum';
-import Header from 'Components/Header';
-import PageSelector from 'Components/PageSelector';
+import Header from 'Components/Common/Header';
+import PageSelector from 'Components/Common/PageSelector';
 
 // USAGE
 //     check options in `../enum.js` and use

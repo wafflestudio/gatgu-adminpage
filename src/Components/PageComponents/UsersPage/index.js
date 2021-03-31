@@ -1,5 +1,5 @@
 import { Puser } from 'Assets';
-import PageHeader from 'Components/PageHeader';
+import PageHeader from 'Components/Common/PageHeader';
 import './UsersPage.scss';
 
 const UsersPage = () => {
