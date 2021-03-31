@@ -3,6 +3,7 @@ import routes from 'Libraries/Routes';
 import { authOptions } from 'Libraries/enum';
 import Header from 'Components/Common/Header';
 import PageSelector from 'Components/Common/PageSelector';
+import './Auth.scss';
 
 // USAGE
 //     check options in `../enum.js` and use
@@ -37,8 +38,10 @@ const Auth = (TargetComponent, option) => {
           <Header />
           <div style={{ display: 'flex' }}>
             <PageSelector />
-            <section style={{ marginLeft: 285, padding: 30 }}>
-              <TargetComponent />
+            <section className="page-section">
+              <div>
+                <TargetComponent />
+              </div>
             </section>
           </div>
         </>

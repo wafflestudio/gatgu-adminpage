@@ -7,6 +7,10 @@
   padding-right: 55px;
   height: 90px;
   line-height: 90px;
+  position: fixed;
+  width: calc(100% - 145px);
+  top: 0;
+  left: 0;
   .header-logo {
     height: 30px;
   }
