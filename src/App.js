@@ -19,14 +19,10 @@ function App() {
           component={Auth(routes.Articles.component, authOptions.MUST_LOGGED)}
         />
         <Route
-          path={routes.Chat.path}
-          component={Auth(routes.Chat.component, authOptions.MUST_LOGGED)}
+          path={routes.Reports.path}
+          component={Auth(routes.Reports.component, authOptions.MUST_LOGGED)}
         />
-        <Route
-          path={routes.Report.path}
-          component={Auth(routes.Report.component, authOptions.MUST_LOGGED)}
-        />
-        <Redirect to="/" />
+        <Redirect to={routes.Login.path} />
       </Switch>
     </BrowserRouter>
   );

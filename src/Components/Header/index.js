@@ -1,6 +1,5 @@
 import './Header.scss';
-import { ReactComponent as HDRlogo } from 'Assets/hdrLogo.svg';
-import { ReactComponent as HDRuser } from 'Assets/hdrUser.svg';
+import { HDRlogo, HDRuser } from 'Assets';
 
 const Header = () => {
   return (

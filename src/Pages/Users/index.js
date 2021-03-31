@@ -1,7 +1,7 @@
 import { routes } from 'Libraries';
 import { Redirect, Route, Switch } from 'react-router';
 
-function Users() {
+const Users = () => {
   return (
     <Switch>
       <Route
@@ -12,6 +12,6 @@ function Users() {
       <Redirect to={routes.Users.path} />
     </Switch>
   );
-}
+};
 
 export default Users;

@@ -1,15 +1,18 @@
 import Page from './Page';
 import './PageSelector.scss';
-import { ReactComponent as Puser } from 'Assets/pUser.svg';
-import { ReactComponent as Particle } from 'Assets/pArticle.svg';
-import { ReactComponent as Preport } from 'Assets/pReport.svg';
+import { Puser, Particle, Preport } from 'Assets';
+import { routes } from 'Libraries';
 
 const PageSelector = () => {
   return (
     <div className="pageselector-wrapper">
-      <Page icon={<Puser />} content="Users" />
-      <Page icon={<Particle />} content="Articles" />
-      <Page icon={<Preport />} content="Reports" />
+      <Page icon={<Puser />} content="Users" link={routes.Users.path} />
+      <Page
+        icon={<Particle />}
+        content="Articles"
+        link={routes.Articles.path}
+      />
+      <Page icon={<Preport />} content="Reports" link={routes.Reports.path} />
     </div>
   );
 };

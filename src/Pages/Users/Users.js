@@ -1,7 +1,7 @@
-function UsersPage() {
-  return (
-    <div>Users Template</div>
-  )
-}
+import UsersPage from 'Components/UsersPage';
 
-export default UsersPage;
+const Users = () => {
+  return <UsersPage />;
+};
+
+export default Users;
