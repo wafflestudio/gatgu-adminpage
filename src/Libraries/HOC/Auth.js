@@ -37,7 +37,9 @@ const Auth = (TargetComponent, option) => {
           <Header />
           <div style={{ display: 'flex' }}>
             <PageSelector />
-            <TargetComponent />
+            <section style={{ marginLeft: 285 }}>
+              <TargetComponent />
+            </section>
           </div>
         </>
       );
