@@ -1,6 +1,7 @@
 import { Redirect } from 'react-router-dom';
 import routes from 'Libraries/Routes';
 import { authOptions } from 'Libraries/enum';
+import Header from 'Components/Header';
 
 // USAGE
 //     check options in `../enum.js` and use
@@ -29,7 +30,14 @@ const Auth = (TargetComponent, option) => {
         console.error('CANNOT REACH HERE');
     }
 
-    return <TargetComponent />;
+    if (logged)
+      return (
+        <>
+          <Header />
+          <TargetComponent />
+        </>
+      );
+    else return <TargetComponent />;
   };
 
   return AuthenticateCheck;

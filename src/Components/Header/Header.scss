@@ -1,0 +1,17 @@
+.header-wrapper {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 90px;
+  padding-right: 55px;
+  height: 90px;
+  line-height: 90px;
+  .header-logo {
+    height: 30px;
+  }
+  .header-user {
+    height: 57px;
+    width: 57px;
+  }
+}
