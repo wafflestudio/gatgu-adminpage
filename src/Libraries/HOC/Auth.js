@@ -2,6 +2,7 @@ import { Redirect } from 'react-router-dom';
 import routes from 'Libraries/Routes';
 import { authOptions } from 'Libraries/enum';
 import Header from 'Components/Header';
+import PageSelector from 'Components/PageSelector';
 
 // USAGE
 //     check options in `../enum.js` and use
@@ -34,7 +35,10 @@ const Auth = (TargetComponent, option) => {
       return (
         <>
           <Header />
-          <TargetComponent />
+          <div style={{ display: 'flex' }}>
+            <PageSelector />
+            <TargetComponent />
+          </div>
         </>
       );
     else return <TargetComponent />;
