@@ -35,7 +35,7 @@ const Auth = (TargetComponent, option) => {
           <div style={{ display: 'flex' }}>
             <PageSelector />
             <section className="page-section">
-              <div>
+              <div className="target-wrapper">
                 <TargetComponent />
               </div>
             </section>

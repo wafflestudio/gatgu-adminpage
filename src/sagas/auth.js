@@ -1,4 +1,4 @@
-import * as authApi from 'libraries/API/AuthAPI';
+import * as authApi from 'apis/AuthAPI';
 import { call, put, takeEvery } from 'redux-saga/effects';
 import * as authActionTypes from 'store/auth/actionTypes';
 

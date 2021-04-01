@@ -1,4 +1,4 @@
-import * as userApi from 'libraries/API/UserAPI';
+import * as userApi from 'apis/UserAPI';
 import { call, put, takeEvery } from 'redux-saga/effects';
 import * as userActionTypes from 'store/user/actionTypes';
 
