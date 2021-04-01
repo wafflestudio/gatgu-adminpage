@@ -1,6 +1,6 @@
 import * as userApi from 'Libraries/API/UserAPI';
 import { call, put, takeEvery } from 'redux-saga/effects';
-import { reducerUtils } from '..';
+import { reducerUtils } from '../helpers';
 import * as userActionTypes from './actionTypes';
 import { setUser, setUsers } from './reducers';
 
@@ -52,15 +52,15 @@ function* getUserSaga(action) {
 }
 
 // 사가들을 합치기
-export function* postsSaga() {
+export function* userSaga() {
   yield takeEvery(userActionTypes.GET_USERS, getUsersSaga);
   yield takeEvery(userActionTypes.GET_USER, getUserSaga);
 }
 
 // initialState 쪽도 반복되는 코드를 initial() 함수를 사용해서 리팩토링 했습니다.
 const initialState = {
-  posts: reducerUtils.initial(),
-  post: reducerUtils.initial(),
+  users: reducerUtils.initial(),
+  user: reducerUtils.initial(),
 };
 
 export default function user(state = initialState, action) {

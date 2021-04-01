@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const requester = axios.create({
-  baseURL: 'api.gatgu.site',
+  baseURL: 'https://api.gatgu.site/admin/',
 });
 
 export default requester;

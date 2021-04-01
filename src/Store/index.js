@@ -1,28 +1,13 @@
-export const reducerUtils = {
-  // 초기 상태. 초기 data 값은 기본적으로 null 이지만
-  // 바꿀 수도 있습니다.
-  initial: (initialData = null) => ({
-    loading: false,
-    data: initialData,
-    error: null,
-  }),
-  // 로딩중 상태. prevState의 경우엔 기본값은 null 이지만
-  // 따로 값을 지정하면 null 로 바꾸지 않고 다른 값을 유지시킬 수 있습니다.
-  loading: (prevState = null) => ({
-    loading: true,
-    data: prevState,
-    error: null,
-  }),
-  // 성공 상태
-  success: (payload) => ({
-    loading: false,
-    data: payload,
-    error: null,
-  }),
-  // 실패 상태
-  error: (error) => ({
-    loading: false,
-    data: null,
-    error: error,
-  }),
-};
+import { combineReducers } from '@reduxjs/toolkit';
+import { all } from 'redux-saga/effects';
+import user, { userSaga } from './user/modules';
+import auth, { authSaga } from './auth/modules';
+
+export const RootReducer = combineReducers({
+  user,
+  auth,
+});
+
+export function* rootSaga() {
+  yield all([userSaga(), authSaga()]); // all 은 배열 안의 여러 사가를 동시에 실행시켜줍니다.
+}

@@ -4,6 +4,7 @@ import { authOptions } from 'Libraries/enum';
 import Header from 'Components/Common/Header';
 import PageSelector from 'Components/Common/PageSelector';
 import './Auth.scss';
+import { useSelector } from 'react-redux';
 
 // USAGE
 //     check options in `../enum.js` and use
@@ -11,16 +12,11 @@ import './Auth.scss';
 
 const Auth = (TargetComponent, option) => {
   const AuthenticateCheck = () => {
-    // TODO: @woohm402
-    //   todo: change into below
-    //       const { logged } = useSelector((state) => state.user);
-    //   when: redux 짜지면
-
-    const logged = true;
+    const logged = useSelector((state) => state.auth.logged.data);
 
     switch (option) {
       case authOptions.MUST_LOGGED:
-        if (!logged) <Redirect to={routes.Login.path} />;
+        if (!logged) return <Redirect to={routes.Login.path} />;
         break;
       case authOptions.MUST_NOT_LOGGED:
         if (logged) return <Redirect to={routes.Users.path} />;

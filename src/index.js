@@ -3,9 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { applyMiddleware, createStore } from 'redux';
+import { RootReducer, rootSaga } from 'Store';
+import { Provider } from 'react-redux';
+import createSagaMiddleware from 'redux-saga';
+
+const sagaMiddleWare = createSagaMiddleware();
+const store = createStore(RootReducer, applyMiddleware(sagaMiddleWare));
+
+sagaMiddleWare.run(rootSaga);
 
 ReactDOM.render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
 
