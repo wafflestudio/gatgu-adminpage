@@ -1,5 +1,5 @@
-import { Preport } from 'Assets';
-import PageHeader from 'Components/Common/PageHeader';
+import { Preport } from 'assets';
+import PageHeader from 'components/Common/PageHeader';
 import './ReportsPage.scss';
 
 const ReportsPage = () => {

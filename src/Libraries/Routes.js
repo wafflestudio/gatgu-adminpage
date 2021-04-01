@@ -1,11 +1,11 @@
-import Login from 'Pages/Login';
-import LoginPage from 'Pages/Login/Login';
-import Users from 'Pages/Users';
-import UsersPage from 'Pages/Users/Users';
-import Reports from 'Pages/Reports';
-import ReportsPage from 'Pages/Reports/Reports';
-import Articles from 'Pages/Articles';
-import ArticlesPage from 'Pages/Articles/Articles';
+import Login from 'pages/Login';
+import LoginPage from 'pages/Login/Login';
+import Users from 'pages/Users';
+import UsersPage from 'pages/Users/Users';
+import Reports from 'pages/Reports';
+import ReportsPage from 'pages/Reports/Reports';
+import Articles from 'pages/Articles';
+import ArticlesPage from 'pages/Articles/Articles';
 
 const routes = {
   // Page groups

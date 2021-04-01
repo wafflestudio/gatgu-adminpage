@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { login } from 'Store/auth/modules';
+import { login } from 'store/auth/modules';
+import { setAuth } from 'store/auth/reducers';
 import './LoginPage.scss';
 
 const LoginPage = () => {

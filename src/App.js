@@ -1,6 +1,6 @@
 import { Route, BrowserRouter, Redirect, Switch } from 'react-router-dom';
-import { Auth, routes } from 'Libraries';
-import { authOptions } from 'Libraries/enum';
+import { Auth, routes } from 'libraries';
+import { authOptions } from 'libraries/enum';
 
 function App() {
   return (

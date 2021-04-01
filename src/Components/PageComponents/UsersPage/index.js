@@ -1,6 +1,6 @@
-import { Puser } from 'Assets';
-import ListDisplay from 'Components/Common/ListDisplay';
-import PageHeader from 'Components/Common/PageHeader';
+import { Puser } from 'assets';
+import ListDisplay from 'components/Common/ListDisplay';
+import PageHeader from 'components/Common/PageHeader';
 import './UsersPage.scss';
 
 const UsersPage = () => {

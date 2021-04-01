@@ -1,4 +1,4 @@
-import { routes } from 'Libraries';
+import { routes } from 'libraries';
 import { Redirect, Route, Switch } from 'react-router';
 
 const Articles = () => {

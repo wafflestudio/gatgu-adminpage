@@ -1,4 +1,4 @@
-import * as authApi from 'Libraries/API/AuthAPI';
+import * as authApi from 'libraries/API/AuthAPI';
 import { call, put, takeEvery } from 'redux-saga/effects';
 import { reducerUtils } from '../helpers';
 import * as authActionTypes from './actionTypes';
@@ -64,7 +64,7 @@ export function* authSaga() {
 
 // initialState 쪽도 반복되는 코드를 initial() 함수를 사용해서 리팩토링 했습니다.
 const initialState = {
-  logged: reducerUtils.initial(false),
+  logged: reducerUtils.initial(true),
 };
 
 export default function auth(state = initialState, action) {

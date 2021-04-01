@@ -1,4 +1,4 @@
-import ArticlesPage from 'Components/PageComponents/ArticlesPage';
+import ArticlesPage from 'components/PageComponents/ArticlesPage';
 
 const Articles = () => {
   return <ArticlesPage />;

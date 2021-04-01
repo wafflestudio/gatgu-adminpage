@@ -1,8 +1,8 @@
 import { Redirect } from 'react-router-dom';
-import routes from 'Libraries/Routes';
-import { authOptions } from 'Libraries/enum';
-import Header from 'Components/Common/Header';
-import PageSelector from 'Components/Common/PageSelector';
+import routes from 'libraries/Routes';
+import { authOptions } from 'libraries/enum';
+import Header from 'components/Common/Header';
+import PageSelector from 'components/Common/PageSelector';
 import './Auth.scss';
 import { useSelector } from 'react-redux';
 

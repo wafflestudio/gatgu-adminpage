@@ -1,7 +1,7 @@
 import Page from './Page';
 import './PageSelector.scss';
-import { Puser, Particle, Preport } from 'Assets';
-import { routes } from 'Libraries';
+import { Puser, Particle, Preport } from 'assets';
+import { routes } from 'libraries';
 
 const PageSelector = () => {
   return (
