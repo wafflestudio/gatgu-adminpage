@@ -1,5 +1,7 @@
+@import 'styles/colors.scss';
+
 .pageselector-wrapper {
-  background-color: rgb(52, 71, 103);
+  background-color: $blue;
   height: calc(100vh - 130px);
   width: 245px;
   padding: 20px;
