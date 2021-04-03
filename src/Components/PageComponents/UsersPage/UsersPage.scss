@@ -1,13 +1,8 @@
-@import 'styles/colors';
-
-header.userspage-wrapper {
-  fill: $black;
-  width: 100%;
-  svg {
-    width: 48px;
-    height: 48px;
-    path {
-      color: $black;
-    }
+section.users-dashboard {
+  width: 514px;
+  height: 162px;
+  div.users-page-abstract-wrapper {
+    width: 514px;
+    height: 162px;
   }
 }

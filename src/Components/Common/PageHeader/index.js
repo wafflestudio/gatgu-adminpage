@@ -2,7 +2,7 @@ import './PageHeader.scss';
 
 const PageHeader = ({ icon, content }) => {
   return (
-    <header className="userspage-wrapper">
+    <header className="pageheader-wrapper">
       {icon}
       <h1>{content}</h1>
     </header>
