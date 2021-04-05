@@ -1,7 +1,9 @@
+@import 'styles/length.scss';
+
 section.page-section {
   position: fixed;
-  left: 285px;
-  top: 90px;
+  left: $selectorWidth;
+  top: $headerHeight;
   right: 0px;
   bottom: 0px;
   padding: 30px;
