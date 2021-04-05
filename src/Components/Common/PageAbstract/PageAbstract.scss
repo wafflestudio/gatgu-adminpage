@@ -1,4 +1,5 @@
 @import 'styles/colors';
+@import 'styles/fonts';
 
 div.pageAbstract-wrapper {
   width: 100%;
@@ -10,8 +11,12 @@ div.pageAbstract-wrapper {
     text-align: center;
     width: 150px;
     p {
+      font-size: $smallFont;
+      color: $lightgray;
     }
     h1 {
+      font-size: $bigFont;
+      color: $lightBlue;
     }
   }
 }

@@ -3,7 +3,7 @@ import { Auth, routes } from 'libraries';
 import { authOptions } from 'libraries/enum';
 import { useToast } from 'hooks/useToast';
 
-function App() {
+function App(): JSX.Element {
   const { Toaster } = useToast();
   return (
     <>

@@ -1,6 +1,6 @@
 import requester from './BaseInstance';
 
-export const login = (id, pw) => {
+export const login = (id: string, pw: string) => {
   console.log(id);
   console.log(pw);
   return requester.post('login/?next=/admin/', { username: id, password: pw });

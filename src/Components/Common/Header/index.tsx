@@ -1,5 +1,6 @@
 import './Header.scss';
 import { HDRlogo, HDRuser } from 'assets';
+import React from 'react';
 
 const Header = () => {
   return (
