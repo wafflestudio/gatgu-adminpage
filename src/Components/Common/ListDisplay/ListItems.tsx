@@ -1,6 +1,12 @@
 import { UserItem } from './ListItem';
 
-const ListItems = ({ itemList, type }) => {
+interface Props {
+  itemList: Array<any>;
+  fetchItems: (key: string) => void;
+  type: string;
+}
+
+const ListItems = ({ itemList, fetchItems, type }: Props) => {
   return (
     <div>
       {itemList.map((item, i) => (

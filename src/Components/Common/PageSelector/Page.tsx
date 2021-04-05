@@ -1,7 +1,13 @@
 import { useHistory } from 'react-router';
 import './Page.scss';
 
-const Page = ({ icon, content, link }) => {
+interface Props {
+  icon: JSX.Element;
+  content: string;
+  link: string;
+}
+
+const Page = ({ icon, content, link }: Props) => {
   const history = useHistory();
 
   const goToPage = () => {

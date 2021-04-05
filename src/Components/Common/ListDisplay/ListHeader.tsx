@@ -1,7 +1,12 @@
 import Input from '../Input';
 import './ListHeader.scss';
 
-const ListHeader = ({ searchKey, searchKeyOnChange }) => {
+interface Props {
+  searchKey: string;
+  searchKeyOnChange: any;
+}
+
+const ListHeader = ({ searchKey, searchKeyOnChange }: Props) => {
   return (
     <div className="list-header-wrapper">
       <header className="list-header">

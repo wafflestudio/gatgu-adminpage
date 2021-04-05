@@ -1,6 +1,13 @@
 import './ListItem.scss';
 
-export const UserItem = ({ item }) => {
+interface UserItem {
+  picture: string;
+  username: string;
+  participated_count: number;
+  hosted_count: number;
+}
+
+export const UserItem = ({ item }: { item: UserItem }) => {
   return (
     <div className="useritem-wrapper">
       <img src={item.picture} alt="" />

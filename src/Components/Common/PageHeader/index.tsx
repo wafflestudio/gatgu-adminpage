@@ -1,6 +1,11 @@
 import './PageHeader.scss';
 
-const PageHeader = ({ icon, content }) => {
+interface Props {
+  icon: JSX.Element;
+  content: string;
+}
+
+const PageHeader = ({ icon, content }: Props) => {
   return (
     <header className="pageheader-wrapper">
       {icon}

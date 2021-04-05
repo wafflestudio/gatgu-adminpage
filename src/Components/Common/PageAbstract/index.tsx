@@ -1,6 +1,13 @@
 import './PageAbstract.scss';
 
-const PageAbstract = ({ list }) => {
+interface Props {
+  list: Array<{
+    content: string | number;
+    title: string;
+  }>;
+}
+
+const PageAbstract = ({ list }: Props) => {
   return (
     <div className="pageAbstract-wrapper">
       {list.map((item, i) => (

@@ -7,10 +7,16 @@ import ListItems from './ListItems';
 //  type 빼고는 다 정해져 있음
 //  새로운 타입을 추가하려면 ListItem.js 를 수정해야 합니다
 
-const ListDisplay = ({ list, fetchItems, type }) => {
+interface Props {
+  list: Array<any>;
+  fetchItems: (key: string) => void;
+  type: string;
+}
+
+const ListDisplay = ({ list, fetchItems, type }: Props) => {
   const [searchKey, setSearchKey] = useState('');
 
-  const searchKeyOnChange = (e) => {
+  const searchKeyOnChange = (e: any) => {
     setSearchKey(e.target.value);
     fetchItems(e.target.value);
   };
