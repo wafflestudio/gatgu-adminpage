@@ -1,0 +1,26 @@
+@import 'styles/colors.scss';
+@import 'styles/length.scss';
+
+.header-wrapper {
+  background-color: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: calc(#{$selectorWidth} / 2);
+  padding-right: 36px;
+  height: $headerHeight;
+  line-height: 90px;
+  position: fixed;
+  width: calc(100% - 36px - #{calc(#{$selectorWidth} / 2)});
+  top: 0;
+  left: 0;
+  .header-logo {
+    height: 30px;
+    width: 150px;
+    margin-left: -75px;
+  }
+  .header-user {
+    height: 38px;
+    width: 38px;
+  }
+}

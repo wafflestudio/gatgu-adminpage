@@ -1,0 +1,27 @@
+@import 'styles/colors.scss';
+
+div.useritem-wrapper {
+  height: 44px;
+  margin-bottom: 6px;
+  line-height: 44px;
+  padding-inline-start: 7px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $lightgray;
+  img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+  p {
+    margin: 0;
+  }
+  div {
+    display: flex;
+    width: 200px;
+    p {
+      margin-right: 20px;
+    }
+  }
+}

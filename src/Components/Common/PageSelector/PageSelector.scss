@@ -1,0 +1,12 @@
+@import 'styles/colors.scss';
+@import 'styles/length.scss';
+
+.pageselector-wrapper {
+  background-color: $blue;
+  height: calc(100vh - 40px);
+  width: calc(#{$selectorWidth} - 40px);
+  padding: 14px;
+  position: fixed;
+  top: $headerHeight;
+  left: 0px;
+}

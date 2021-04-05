@@ -1,0 +1,17 @@
+@import 'styles/colors';
+
+div.pageAbstract-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: $white;
+  div.pageAbstractElement-wrapper {
+    text-align: center;
+    width: 150px;
+    p {
+    }
+    h1 {
+    }
+  }
+}
