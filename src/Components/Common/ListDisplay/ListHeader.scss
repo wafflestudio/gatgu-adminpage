@@ -1,0 +1,14 @@
+div.list-header-wrapper {
+  height: 36px;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+  header.list-header {
+    height: 36px;
+    line-height: 36px;
+    padding-inline-start: 15px;
+    div.list-header-input-wrapper {
+      height: 24px;
+      width: 300px;
+    }
+  }
+}

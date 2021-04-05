@@ -7,8 +7,8 @@ import './UsersPage.scss';
 const UsersPage = () => {
   const dummyList = [
     { title: 'articles', content: '89' },
-    { title: 'new articles today', content: '5' },
-    { title: 'new articles in 7 days', content: '24' },
+    { title: 'new articles\ntoday', content: '5' },
+    { title: 'new articles\nin 7 days', content: '24' },
   ];
   return (
     <>
