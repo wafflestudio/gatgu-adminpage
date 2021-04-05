@@ -1,3 +1,5 @@
+@import 'styles/colors.scss';
+
 div.useritem-wrapper {
   height: 44px;
   margin-bottom: 6px;
@@ -6,6 +8,7 @@ div.useritem-wrapper {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid $lightgray;
   img {
     height: 30px;
   }
