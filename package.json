@@ -7,6 +7,10 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14.37",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
     "axios": "^0.21.1",
     "immer": "^9.0.1",
     "lodash": "^4.17.21",
@@ -19,12 +23,13 @@
     "react-toastify": "^7.0.3",
     "redux": "^4.0.5",
     "redux-saga": "^1.1.3",
+    "typescript": "^4.2.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "git push heroku master",
+    "deploy": "aws s3 sync ./build s3://wrtrellofrontwhm --profile=woohmProfile",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -45,5 +50,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.168",
+    "@types/react-redux": "^7.1.16",
+    "@types/react-router-dom": "^5.1.7"
   }
 }
