@@ -2,7 +2,7 @@ import * as authApi from 'apis/AuthAPI';
 import { call, put, takeEvery } from 'redux-saga/effects';
 import * as authActionTypes from 'store/auth/actionTypes';
 
-function* loginSaga(action) {
+function* loginSaga(action: any): any {
   console.log(action);
   const { id, pw } = action.payload;
   try {
@@ -22,30 +22,7 @@ function* loginSaga(action) {
   }
 }
 
-// 액션이 지니고 있는 값을 조회하고 싶다면 action을 파라미터로 받아와서 사용 할 수 있습니다.
-function* logoutSaga(action) {
-  const param = action.payload;
-  const id = action.meta;
-  try {
-    const post = yield call(authApi.logout, param); // API 함수에 넣어주고 싶은 인자는 call 함수의 두번째 인자부터 순서대로 넣어주면 됩니다.
-    yield put({
-      type: authActionTypes.LOGOUT_SUCCESS,
-      error: false,
-      payload: post,
-      meta: id,
-    });
-  } catch (e) {
-    yield put({
-      type: authActionTypes.LOGOUT_FAILURE,
-      error: true,
-      payload: e,
-      meta: id,
-    });
-  }
-}
-
 // 사가들을 합치기
 export function* authSaga() {
   yield takeEvery(authActionTypes.LOGIN, loginSaga);
-  yield takeEvery(authActionTypes.LOGOUT, logoutSaga);
 }

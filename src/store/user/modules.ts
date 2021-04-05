@@ -4,7 +4,7 @@ import { setUser, setUsers } from './reducers';
 
 // payload는 파라미터 용도, meta는 리듀서에서 id를 알기위한 용도
 export const getUsers = () => ({ type: userActionTypes.GET_USERS });
-export const getUser = (id) => ({
+export const getUser = (id: string) => ({
   type: userActionTypes.GET_USER,
   payload: id,
   meta: id,
@@ -16,7 +16,7 @@ const initialState = {
   user: reducerUtils.initial(),
 };
 
-export default function user(state = initialState, action) {
+export default function user(state = initialState, action: any) {
   switch (action.type) {
     case userActionTypes.GET_USERS:
     case userActionTypes.GET_USERS_SUCCESS:

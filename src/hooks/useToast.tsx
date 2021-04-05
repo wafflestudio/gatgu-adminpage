@@ -3,7 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const toastProps = {
-  position: 'bottom-right',
+  position: toast.POSITION.BOTTOM_RIGHT,
   autoClose: 2000,
   hideProgressBar: true,
   closeOnClick: true,
@@ -16,7 +16,7 @@ export const useToast = () => {
   return {
     Toaster: () => (
       <ToastContainer
-        position="bottom-right"
+        position={toast.POSITION.BOTTOM_RIGHT}
         autoClose={1000}
         hideProgressBar
         newestOnTop={false}
@@ -28,10 +28,10 @@ export const useToast = () => {
       />
     ),
     toast: {
-      success: (message) => {
+      success: (message: string) => {
         toast.success(message, toastProps);
       },
-      error: (message) => {
+      error: (message: string) => {
         toast.error(message, toastProps);
       },
     },

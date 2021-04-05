@@ -1,13 +1,13 @@
 import './ListItem.scss';
 
-interface UserItem {
+interface UserItemProps {
   picture: string;
   username: string;
   participated_count: number;
   hosted_count: number;
 }
 
-export const UserItem = ({ item }: { item: UserItem }) => {
+export const UserItem = ({ item }: { item: UserItemProps }) => {
   return (
     <div className="useritem-wrapper">
       <img src={item.picture} alt="" />

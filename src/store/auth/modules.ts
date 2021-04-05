@@ -3,7 +3,7 @@ import * as authActionTypes from './actionTypes';
 import { setAuth } from './reducers';
 
 // payload는 파라미터 용도, meta는 리듀서에서 id를 알기위한 용도
-export const login = (id, pw) => ({
+export const login = (id: string, pw: string) => ({
   type: authActionTypes.LOGIN,
   payload: { id, pw },
   meta: { id, pw },
@@ -17,7 +17,7 @@ const initialState = {
   logged: reducerUtils.initial(true),
 };
 
-export default function auth(state = initialState, action) {
+export default function auth(state = initialState, action: any) {
   switch (action.type) {
     case authActionTypes.LOGIN:
     case authActionTypes.LOGIN_SUCCESS:

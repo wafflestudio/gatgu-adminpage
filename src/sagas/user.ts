@@ -2,7 +2,7 @@ import * as userApi from 'apis/UserAPI';
 import { call, put, takeEvery } from 'redux-saga/effects';
 import * as userActionTypes from 'store/user/actionTypes';
 
-function* getUsersSaga() {
+function* getUsersSaga(): any {
   try {
     const users = yield call(userApi.getAll); // call 을 사용하면 특정 함수를 호출하고, 결과물이 반환 될 때까지 기다려줄 수 있습니다.
     yield put({
@@ -20,7 +20,7 @@ function* getUsersSaga() {
 }
 
 // 액션이 지니고 있는 값을 조회하고 싶다면 action을 파라미터로 받아와서 사용 할 수 있습니다.
-function* getUserSaga(action) {
+function* getUserSaga(action: any): any {
   const param = action.payload;
   const id = action.meta;
   try {

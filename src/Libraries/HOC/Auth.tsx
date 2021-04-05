@@ -10,9 +10,9 @@ import { useSelector } from 'react-redux';
 //     check options in `../enum.js` and use
 //     example: `Auth(<YourComponent />, authOptions.WHATEVER)`
 
-const Auth = (TargetComponent, option) => {
+const Auth = (TargetComponent: any, option: number) => {
   const AuthenticateCheck = () => {
-    const logged = useSelector((state) => state.auth.logged.data);
+    const logged = useSelector((state: any) => state.auth.logged.data);
 
     switch (option) {
       case authOptions.MUST_LOGGED:
