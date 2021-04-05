@@ -2,16 +2,12 @@ import { useState } from 'react';
 import './ListDisplay.scss';
 import ListHeader from './ListHeader';
 import ListItems from './ListItems';
-import debounce from 'lodash/debounce';
 
-const fetchItems = debounce((key) => {
-  // TODO: @woohm402
-  //    fetch items by key
-  //    when server API is done
-  console.log(`${key}로 검색`);
-}, 1000);
+// Usage
+//  type 빼고는 다 정해져 있음
+//  새로운 타입을 추가하려면 ListItem.js 를 수정해야 합니다
 
-const ListDisplay = () => {
+const ListDisplay = ({ list, fetchItems, type }) => {
   const [searchKey, setSearchKey] = useState('');
 
   const searchKeyOnChange = (e) => {
@@ -22,7 +18,7 @@ const ListDisplay = () => {
   return (
     <div className="list-display-wrapper">
       <ListHeader searchKey={searchKey} searchKeyOnChange={searchKeyOnChange} />
-      <ListItems />
+      <ListItems itemList={list} fetchItems={fetchItems} type={type} />
     </div>
   );
 };
