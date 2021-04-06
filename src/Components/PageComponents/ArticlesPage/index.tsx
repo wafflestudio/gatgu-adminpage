@@ -1,6 +1,6 @@
 import { Particle } from 'assets';
 import PageHeader from 'components/Common/PageHeader';
-import './ArticlesPage.scss';
+import styles from './ArticlesPage.module.scss';
 
 const ArticlesPage = () => {
   return (

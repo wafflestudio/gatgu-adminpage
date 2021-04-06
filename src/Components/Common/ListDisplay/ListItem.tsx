@@ -1,4 +1,4 @@
-import './ListItem.scss';
+import styles from './ListItem.module.scss';
 
 interface UserItemProps {
   picture: string;
@@ -9,7 +9,7 @@ interface UserItemProps {
 
 export const UserItem = ({ item }: { item: UserItemProps }) => {
   return (
-    <div className="useritem-wrapper">
+    <div className={styles.wrapper}>
       <img src={item.picture} alt="" />
       <p>{item.username}</p>
       <div>

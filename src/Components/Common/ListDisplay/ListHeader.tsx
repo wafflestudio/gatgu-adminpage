@@ -1,5 +1,5 @@
 import Input from '../Input';
-import './ListHeader.scss';
+import styles from './ListHeader.module.scss';
 
 interface Props {
   searchKey: string;
@@ -8,9 +8,9 @@ interface Props {
 
 const ListHeader = ({ searchKey, searchKeyOnChange }: Props) => {
   return (
-    <div className="list-header-wrapper">
-      <header className="list-header">
-        <div className="list-header-input-wrapper">
+    <div className={styles.wrapper}>
+      <header className={styles.header}>
+        <div className={styles.inputWrapper}>
           <Input
             value={searchKey}
             onChange={searchKeyOnChange}

@@ -1,4 +1,4 @@
-import './PageHeader.scss';
+import styles from './PageHeader.module.scss';
 
 interface Props {
   icon: JSX.Element;
@@ -7,7 +7,7 @@ interface Props {
 
 const PageHeader = ({ icon, content }: Props) => {
   return (
-    <header className="pageheader-wrapper">
+    <header className={styles.wrapper}>
       {icon}
       <h1>{content}</h1>
     </header>

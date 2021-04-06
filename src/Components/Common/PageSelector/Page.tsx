@@ -1,5 +1,5 @@
 import { useHistory } from 'react-router';
-import './Page.scss';
+import styles from './Page.module.scss';
 
 interface Props {
   icon: JSX.Element;
@@ -16,11 +16,11 @@ const Page = ({ icon, content, link }: Props) => {
 
   return (
     <>
-      <button className="page-wrapper" onClick={goToPage}>
+      <button className={styles.wrapper} onClick={goToPage}>
         {icon}
         <h1>{content}</h1>
       </button>
-      <hr className="page-line" />
+      <hr className={styles.line} />
     </>
   );
 };

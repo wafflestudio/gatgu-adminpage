@@ -1,6 +1,6 @@
 @import 'styles/colors.scss';
 
-button.page-wrapper {
+button.wrapper {
   width: 246px;
   height: 50px;
   display: flex;
@@ -29,6 +29,6 @@ button.page-wrapper {
   }
 }
 
-hr.page-line {
+hr.line {
   color: $white;
 }

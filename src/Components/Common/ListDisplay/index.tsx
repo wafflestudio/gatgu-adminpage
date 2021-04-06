@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './ListDisplay.scss';
+import styles from './ListDisplay.module.scss';
 import ListHeader from './ListHeader';
 import ListItems from './ListItems';
 
@@ -22,7 +22,7 @@ const ListDisplay = ({ list, fetchItems, type }: Props) => {
   };
 
   return (
-    <div className="list-display-wrapper">
+    <div className={styles.wrapper}>
       <ListHeader searchKey={searchKey} searchKeyOnChange={searchKeyOnChange} />
       <ListItems itemList={list} fetchItems={fetchItems} type={type} />
     </div>

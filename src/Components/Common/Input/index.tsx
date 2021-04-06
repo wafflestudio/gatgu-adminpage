@@ -1,4 +1,4 @@
-import './Input.scss';
+import styles from './Input.module.scss';
 
 interface Props {
   value: string;
@@ -13,7 +13,7 @@ const Input = ({ value, onChange, placeholder, icon }: Props) => {
       value={value}
       onChange={onChange}
       placeholder={placeholder}
-      className="custom-input"
+      className={styles.input}
     />
   );
 };

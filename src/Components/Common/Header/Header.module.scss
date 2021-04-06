@@ -1,7 +1,7 @@
 @import 'styles/colors.scss';
 @import 'styles/length.scss';
 
-.header-wrapper {
+.wrapper {
   background-color: $white;
   display: flex;
   justify-content: space-between;
@@ -14,12 +14,12 @@
   width: calc(100% - 36px - #{calc(#{$selectorWidth} / 2)});
   top: 0;
   left: 0;
-  .header-logo {
+  .logo {
     height: 30px;
     width: 150px;
     margin-left: -75px;
   }
-  .header-user {
+  .user {
     height: 38px;
     width: 38px;
   }

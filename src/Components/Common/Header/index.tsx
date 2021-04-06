@@ -1,11 +1,11 @@
-import './Header.scss';
+import styles from './Header.module.scss';
 import { HDRlogo, HDRuser } from 'assets';
 
 const Header = () => {
   return (
-    <div className="header-wrapper">
-      <HDRlogo className="header-logo" />
-      <HDRuser className="header-user" />
+    <div className={styles.wrapper}>
+      <HDRlogo className={styles.logo} />
+      <HDRuser className={styles.user} />
     </div>
   );
 };

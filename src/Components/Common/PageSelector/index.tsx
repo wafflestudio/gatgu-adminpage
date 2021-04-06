@@ -1,11 +1,11 @@
 import Page from './Page';
-import './PageSelector.scss';
+import styles from './PageSelector.module.scss';
 import { Puser, Particle, Preport } from 'assets';
 import { routes } from 'libraries';
 
 const PageSelector = () => {
   return (
-    <div className="pageselector-wrapper">
+    <div className={styles.wrapper}>
       <Page icon={<Puser />} content="Users" link={routes.Users.path} />
       <Page
         icon={<Particle />}

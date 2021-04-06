@@ -2,7 +2,7 @@ import { Puser } from 'assets';
 import ListDisplay from 'components/Common/ListDisplay';
 import PageAbstract from 'components/Common/PageAbstract';
 import PageHeader from 'components/Common/PageHeader';
-import './UsersPage.scss';
+import styles from './UsersPage.module.scss';
 import debounce from 'lodash/debounce';
 
 const fetchItems = debounce((key) => {
@@ -86,8 +86,8 @@ const UsersPage = () => {
   return (
     <>
       <PageHeader icon={<Puser />} content="Users" />
-      <section className="users-dashboard">
-        <div className="users-page-abstract-wrapper">
+      <section className={styles.dashboard}>
+        <div className={styles.abstractWrapper}>
           <PageAbstract list={dummyList} />
         </div>
       </section>

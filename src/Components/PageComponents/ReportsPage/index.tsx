@@ -2,7 +2,7 @@ import { Preport } from 'assets';
 import PageHeader from 'components/Common/PageHeader';
 import { useToast } from 'hooks/useToast';
 import { useEffect } from 'react';
-import './ReportsPage.scss';
+import styles from './ReportsPage.module.scss';
 
 const ReportsPage = () => {
   const { toast } = useToast();

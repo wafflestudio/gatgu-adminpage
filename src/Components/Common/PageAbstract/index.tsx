@@ -1,4 +1,4 @@
-import './PageAbstract.scss';
+import styles from './PageAbstract.module.scss';
 
 interface Props {
   list: Array<{
@@ -9,9 +9,9 @@ interface Props {
 
 const PageAbstract = ({ list }: Props) => {
   return (
-    <div className="pageAbstract-wrapper">
+    <div className={styles.wrapper}>
       {list.map((item, i) => (
-        <div key={i} className="pageAbstractElement-wrapper">
+        <div key={i} className={styles.elemWrapper}>
           <h1>{item.content}</h1>
           <p>{item.title}</p>
         </div>
