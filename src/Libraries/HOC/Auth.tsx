@@ -4,16 +4,15 @@ import { authOptions } from 'libraries/enum';
 import Header from 'components/Common/Header';
 import PageSelector from 'components/Common/PageSelector';
 import './Auth.scss';
-import { useSelector } from 'react-redux';
 
 // USAGE
 //     check options in `../enum.js` and use
 //     example: `Auth(<YourComponent />, authOptions.WHATEVER)`
 
 const Auth = (TargetComponent: any, option: number) => {
-  const AuthenticateCheck = () => {
-    const logged = useSelector((state: any) => state.auth.logged.data);
+  const logged = localStorage.getItem('authToken');
 
+  const AuthenticateCheck = () => {
     switch (option) {
       case authOptions.MUST_LOGGED:
         if (!logged) return <Redirect to={routes.Login.path} />;

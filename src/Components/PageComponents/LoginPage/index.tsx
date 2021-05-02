@@ -1,18 +1,18 @@
-import { useCallback, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { login } from 'store/auth/modules';
-import { setAuth } from 'store/auth/reducers';
+import { useState } from 'react';
 import styles from './LoginPage.module.scss';
+import { login } from '../../../apis/AuthAPI';
 
 const LoginPage = () => {
   const [id, setID] = useState('');
   const [pw, setPW] = useState('');
 
-  const dispatch = useDispatch();
-
-  const loginReq = useCallback(() => {
-    dispatch(login(id, pw));
-  }, [dispatch, id, pw]);
+  const loginReq = () => {
+    login(id, pw)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <div className={styles.wrapper}>
